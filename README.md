@@ -140,3 +140,13 @@ src/
 
 > 사용자 모드에서 회원가입, 상품 탐색, 장바구니 담기, 주문 및 배송 정보 확인 과정을 담은 시연입니다.
 
+---
+
+##  코드 리뷰 
+
+![CodeReview](https://github.com/user-attachments/assets/1f7d2ce6-4fdc-461a-92c0-8197c8cc05e0)
+
+---
+
+
+
