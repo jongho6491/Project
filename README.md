@@ -24,7 +24,7 @@ FishingMartConsoleApp은 자바 콘솔 환경에서 동작하는 낚시용품 �
 - 주문 내역 확인 (배송지 포함)  
 - 배송지 및 연락처 변경 가능  
 
-**▶ 관리자 기능 (선택 구현)**
+**▶ 관리자 기능**
 - 낚시대 및 미끼 상품 등록, 수정, 삭제  
 - 전체 주문 내역 확인  
 
@@ -66,7 +66,8 @@ src/
 
 - Java 17 이상  
 - 콘솔 기반 애플리케이션  
-- 객체 직렬화 기반 `.obj` 파일 저장 방식 사용  
+- 객체 직렬화 기반 `.obj` 파일 저장 방식 사용
+- Eclipse 사용
 
 ---
 
@@ -74,7 +75,7 @@ src/
 
 > 주요 사용자 유형(회원, 관리자)의 행위를 모델링한 유스케이스 다이어그램입니다.
 
-![유스케이스 다이어그램](img/usecase.png)
+![유스케이스 다이어그램](img/usecase.PNG)
 
 ---
 
@@ -82,7 +83,7 @@ src/
 
 > 사용자와 관리자 메뉴의 흐름을 시각화한 다이어그램입니다.
 
-![메뉴 흐름도](./img/menu.png)
+![메뉴 흐름도](img/menu.png)
 
 ---
 
@@ -109,36 +110,36 @@ src/
 
 > 각 주요 도메인 객체의 구조를 나타낸 클래스 다이어그램입니다.
 
-### 🎣 Rod 클래스  
-![Rod 패키지](./img/Rod.png)
+### 🎣 Rod 패키지  
+![Rod 패키지](img/Rod.PNG)
 
-### 🐛 Bait 클래스  
-![Bait 패키지](./img/Bait.png)
+### 🐛 Bait 패키지  
+![Bait 패키지](img/Bait.PNG)
 
-### 🛒 Cart 클래스  
-![Cart 패키지](./img/Cart.png)
+### 🛒 Cart 패키지  
+![Cart 패키지](img/Cart.PNG)
 
-### 👤 Member 클래스  
+### 👤 Member 패키지  
 ![Member 패키지](./img/Member.png)
 
-### 📦 Order 클래스  
-![Order 패키지](./img/Order.png)
+### 📦 Order 패키지  
+![Order 패키지](img/Order.PNG)
 
 ---
 
-### ✅ 1. 관리자 기능 시연
+<h3> 1. 관리자 기능 시연</h3>
+<a href="https://youtu.be/hxXFCCQd9e4" target="_blank">
+  <img src="https://img.youtube.com/vi/hxXFCCQd9e4/0.jpg" alt="관리자 기능 시연 영상 썸네일" width="480">
+</a>
+<p>관리자 모드에서 상품 등록, 수정, 삭제 기능을 시연한 영상입니다.</p>
 
-[![관리자 시연 영상](./videos/Admin.mkv)
+<hr>
 
-> 관리자 모드에서 상품 등록, 수정, 삭제등 기능 과정을 담은 시연입니다.
-
----
-
-### ✅ 2. 사용자 기능 시연
-
-[![사용자 시연 영상](./videos/User.mkv)
-
-> 사용자 모드에서 회원가입, 상품 탐색, 장바구니 담기, 주문 및 배송 정보 확인 과정을 담은 시연입니다.
+<h3> 2. 사용자 기능 시연</h3>
+<a href="https://youtu.be/kzxOn6KzAsE" target="_blank">
+  <img src="https://img.youtube.com/vi/kzxOn6KzAsE/0.jpg" alt="사용자 기능 시연 영상 썸네일" width="480">
+</a>
+<p>회원가입, 상품 탐색, 장바구니 담기, 주문/배송 확인을 시연한 영상입니다.</p>
 
 ---
 
@@ -147,6 +148,24 @@ src/
 ![CodeReview](https://github.com/user-attachments/assets/1f7d2ce6-4fdc-461a-92c0-8197c8cc05e0)
 
 ---
+## 프로젝트 회고
+
+### 어려웠던 점
+- 클래스 구조 변경 후 `serialVersionUID` 불일치로 인한 `.obj` 파일 역직렬화 오류 발생  
+  → `java.io.InvalidClassException` 예외로 인해 저장된 파일 로딩 실패
+- 관리자/사용자 기능을 하나의 콘솔 앱 안에서 유기적으로 분리하는 구조 설계에 어려움
+
+### 🔧 문제 해결 방법
+- `serialVersionUID`를 명시적으로 선언하여 클래스 변경 시에도 파일 호환 가능하게 처리
+- `.obj` 파일이 깨졌을 경우 자동 삭제 및 초기화 방식 적용
+- 입력 유틸리티 클래스 `MyAppReader`를 분리하여 일관된 사용자 입력 처리 구현
+- `FishingMartConsoleApp`에서 사용자/관리자 메뉴를 명확히 구분하고 흐름을 설계
+
+### ✨ 배운 점
+- 객체지향 설계의 중요성을 직접 체감하며, 클래스 간 역할 분리가 코드의 가독성과 유지보수성을 높여준다는 것을 배움
+- 파일 입출력과 예외 처리 경험을 통해 실전 개발에서의 복잡한 상황을 대비할 수 있는 기초 역량을 다짐
+- 개인 프로젝트로 비록 콘솔구현이지만 끝까지 구현해본 경험이 큰도전이었고 성장할 수 있었음
+
 
 
 
