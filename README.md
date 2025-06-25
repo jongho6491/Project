@@ -89,21 +89,21 @@ src/
 ---
 
 ##  요구사항 정의
-![요구사항-정의](./images/Requirements definition.PNG)
+![요구사항-정의](./Requirements/Requirements%20definition.PNG)
 
 ### 요구사항명세-기능
 
 #### 1. 낚시대(Rod)
-![Rod 기능 요구사항](./images/R-f(Rod).PNG)
+![Rod 기능 요구사항](./Requirements/R-f(Rod).PNG)
 
 #### 2. 미끼(Bait)
-![Bait 기능 요구사항](./images/R-f(Bait).PNG)
+![Bait 기능 요구사항](./Requirements/R-f(Bait).PNG)
 
 ---
 
 ### 요구사항명세-비기능(데이터)
 
-![비기능 요구사항 - 데이터](./images/RN-f(데이터).PNG)
+![비기능 요구사항 - 데이터](./Requirements/RN-f(데이터).PNG)
 
 ##  클래스 다이어그램
 
