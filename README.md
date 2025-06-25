@@ -7,14 +7,14 @@ FishingMartConsoleApp은 자바 콘솔 환경에서 동작하는 낚시용품 �
 
 ---
 
-## ✨ 프로젝트 개요
+##  프로젝트 개요
 
 - 콘솔 기반 자바 애플리케이션으로, 객체지향 구조와 파일 저장 방식을 활용한 쇼핑 시스템입니다.
 - 사용자/관리자 모드를 지원하며, 회원 관리부터 주문/배송까지의 흐름을 구현하였습니다.
 
 ---
 
-## 📦 주요 기능
+##  주요 기능
 
 **▶ 사용자 기능**
 - 회원가입 / 로그인 / 내 정보 보기  
@@ -29,7 +29,7 @@ FishingMartConsoleApp은 자바 콘솔 환경에서 동작하는 낚시용품 �
 - 전체 주문 내역 확인  
 
 ---
-## 📁 패키지 구조
+##  패키지 구조
 
 ```
 src/
@@ -48,7 +48,7 @@ src/
 
 ---
 
-## 🧪 주요 클래스 설명
+##  주요 클래스 설명
 
 | 패키지    | 클래스명                                                   | 설명                    |
 |-----------|------------------------------------------------------------|-------------------------|
@@ -62,7 +62,7 @@ src/
 
 ---
 
-## ⚙️ 개발 환경
+##  개발 환경
 
 - Java 17 이상  
 - 콘솔 기반 애플리케이션  
@@ -70,41 +70,54 @@ src/
 
 ---
 
-## 🧭 전체 메뉴 흐름도
+##  전체 메뉴 흐름도
 
 > 사용자와 관리자 메뉴의 흐름을 시각화한 다이어그램입니다.
 
-![메뉴 흐름도](./images/menu-flow.png)
+![메뉴 흐름도](./images/menu.png)
 
 ---
 
-## 🎯 유스케이스 다이어그램
+##  유스케이스 다이어그램
 
 > 주요 사용자 유형(회원, 관리자)의 행위를 모델링한 유스케이스 다이어그램입니다.
 
-![유스케이스 다이어그램](./images/usecase-diagram.png)
+![유스케이스 다이어그램](./images/usecase.png)
 
 ---
 
-## 📦 클래스 다이어그램
+##  클래스 다이어그램
 
 > 각 주요 도메인 객체의 구조를 나타낸 클래스 다이어그램입니다.
 
 ### 🎣 Rod 클래스  
-![Rod Class](./images/class-rod.png)
+![Rod 패키지](./images/Rod.png)
 
-### 🪱 Bait 클래스  
-![Bait Class](./images/class-bait.png)
+### 🐛 Bait 클래스  
+![Bait 패키지](./images/Bait.png)
 
 ### 🛒 Cart 클래스  
-![Cart Class](./images/class-cart.png)
+![Cart 패키지](./images/Cart.png)
 
 ### 👤 Member 클래스  
-![Member Class](./images/class-member.png)
+![Member 패키지](./images/Member.png)
 
 ### 📦 Order 클래스  
-![Order Class](./images/class-order.png)
+![Order 패키지](./images/Order.png)
 
 ---
 
+### ✅ 1. 관리자 기능 시연
+
+[![관리자 시연 영상](./images/video-thumb.png)](./videos/demo1-admin.mkv)
+
+> 관리자 모드에서 상품 등록, 수정, 삭제등 기능 과정을 담은 시연입니다.
+
+---
+
+### ✅ 2. 사용자 기능 시연
+
+[![사용자 시연 영상](./images/video-thumb.png)](./videos/demo2-user.mkv)
+
+> 사용자 모드에서 회원가입, 상품 탐색, 장바구니 담기, 주문 및 배송 정보 확인 과정을 담은 시연입니다.
 
