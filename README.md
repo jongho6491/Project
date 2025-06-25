@@ -109,7 +109,7 @@ src/
 
 ### ✅ 1. 관리자 기능 시연
 
-[![관리자 시연 영상](./images/video-thumb.png)](./videos/demo1-admin.mkv)
+[![관리자 시연 영상](./videos/Admin.mkv)
 
 > 관리자 모드에서 상품 등록, 수정, 삭제등 기능 과정을 담은 시연입니다.
 
@@ -117,7 +117,7 @@ src/
 
 ### ✅ 2. 사용자 기능 시연
 
-[![사용자 시연 영상](./images/video-thumb.png)](./videos/demo2-user.mkv)
+[![사용자 시연 영상](./videos/User.mkv)
 
 > 사용자 모드에서 회원가입, 상품 탐색, 장바구니 담기, 주문 및 배송 정보 확인 과정을 담은 시연입니다.
 
